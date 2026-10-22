@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "OrderAv",
+  "namespace": "KafkaApp",
+  "fields": [
+    { "name": "Id", "type": "string" },
+    { "name": "Product", "type": "string" },
+    { "name": "Price", "type": "int" },
+    { "name": "Quantity", "type": "int" }
+  ]
+}
