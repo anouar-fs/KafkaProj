@@ -1,4 +1,4 @@
-name: CI - Build .NET
+name: Pipeline
 
 on:
   pull_request:
