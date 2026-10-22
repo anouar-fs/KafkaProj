@@ -4,6 +4,7 @@ using kafkaTestApp.Kafka.Avro.Generated.KafkaApp;
 using kafkaTestApp.Kafka.Consumer;
 using kafkaTestApp.Kafka.dlqType;
 using kafkaTestApp.Mapper;
+using kafkaTestApp.Services;
 
 var Produceconfig = new ProducerConfig
 {
@@ -26,6 +27,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<KafkaProducer<OrderAv>>( _ => new KafkaProducer<OrderAv>(Produceconfig, "order-topic") );
 builder.Services.AddSingleton<KafkaProducer<DlqType<OrderAv>>>( _ => new KafkaProducer<DlqType<OrderAv>>(Produceconfig, "orders-dlq") );
 builder.Services.AddTransient<OrderToOrderAv>();
+builder.Services.AddScoped<KafkaService>();
 
 builder.Services.AddHostedService<KafkaOrderConsumer>();
 
