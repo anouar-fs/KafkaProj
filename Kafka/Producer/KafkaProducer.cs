@@ -15,7 +15,7 @@ public class KafkaProducer<TShema>
         var schemaRegestry = new CachedSchemaRegistryClient(
                 new SchemaRegistryConfig
                 {
-                    Url = "http://localhost:8081"
+                    Url = "http://schema-registry:8081"
                 });
         this.producer = new ProducerBuilder<Null, TShema>(_config)
             .SetValueSerializer(new AvroSerializer<TShema>(schemaRegestry))

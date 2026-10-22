@@ -8,7 +8,7 @@ using kafkaTestApp.Services;
 
 var Produceconfig = new ProducerConfig
 {
-    BootstrapServers = "localhost:9092",
+    BootstrapServers = "broker:9092",
     EnableIdempotence = true,
     Acks = Acks.All,
     LingerMs = 50

@@ -25,7 +25,7 @@ public abstract class KafkaConsumerBase<TPayload>: BackgroundService
         var schemaRegestry = new CachedSchemaRegistryClient(
          new SchemaRegistryConfig
          {
-             Url = "http://localhost:8081"
+             Url = "http://schema-registry:8081"
          });
 
         using var consumer = new ConsumerBuilder<Ignore, TPayload>(_config)
