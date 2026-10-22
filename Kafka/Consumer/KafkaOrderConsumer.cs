@@ -13,7 +13,7 @@ public class KafkaOrderConsumer : KafkaConsumerBase<OrderAv>
         this._topic = topic;
         this._config = new ConsumerConfig
         {
-            BootstrapServers = "broker:9092",
+            BootstrapServers = "broker:29092",
             GroupId = "orders-consumer-group",
             AutoOffsetReset = AutoOffsetReset.Earliest,
             EnableAutoCommit = false
