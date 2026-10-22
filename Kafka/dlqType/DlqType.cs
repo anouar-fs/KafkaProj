@@ -5,4 +5,3 @@ public class DlqType<Tpayload>
     public string Error { get; set; } = string.Empty;
     public DateTime FailedAt { get; set; }
 }
-
